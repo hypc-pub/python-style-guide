@@ -1,3 +1,15 @@
 # Main
 
-Even a file meant to be used as a script should be importable and a mere import should not have the side effect of executing the script's main functionality. The main functionality should be in a main() function.
+正常情况下，作为脚本的文件也是可以导入的，那么单纯的导入不应该有执行脚本的效果。
+主要功能应该都在`main()`函数中。
+
+```python
+def main():
+    ...
+
+if __name__ == '__main__':
+    main()
+```
+
+当作为模块被导入时，所有的代码都会被加载。
+注意，不要调用函数、创建对象或其他操作，这些操作在导入时不应该被执行。

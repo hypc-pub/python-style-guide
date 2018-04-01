@@ -1,3 +1,5 @@
 # Shebang Line
 
-Most .py files do not need to start with a #! line. Start the main file of a program with #!/usr/bin/env python with an optional single digit 2 or 3 suffix.
+许多`.py`文件都不需要以`#!`开头：`#!/usr/bin/env python`。
+
+但是在需要直接执行的文件中还是有必要的，它能帮助内核找到对应的Python解释器。

@@ -1,3 +1,7 @@
 # Blank Lines
 
-Two blank lines between top-level definitions, one blank line between method definitions.
+在顶级类或函数之间使用两个空白行，而在类函数之间使用单个空白行。
+
+在类定义和类中第一个函数定义之间不使用空白行。
+
+在功能或方法的合适位置使用空白行（一般在一个业务逻辑完成之后）。

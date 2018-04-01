@@ -1,3 +1,3 @@
 # Semicolons
 
-Do not terminate your lines with semi-colons and do not use semi-colons to put two commands on the same line.
+不要使用分号作为行终结符，也不要用分号将两个或多个命令连在一起写在一行上面。
