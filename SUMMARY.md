@@ -47,3 +47,10 @@
 * [Access Control](python-style-rules/access-control.md)
 * [Naming](python-style-rules/naming.md)
 * [Main](python-style-rules/main.md)
+
+### Django Style Rules
+
+* [Models](django-style-rules/models.md)
+* [Views](django-style-rules/views.md)
+* [Forms](django-style-rules/forms.md)
+* [Urls](django-style-rules/urls.md)
