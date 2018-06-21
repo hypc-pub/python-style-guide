@@ -1,0 +1,921 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Threading · Python Style Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="power-features.html" />
+    
+    
+    <link rel="prev" href="decorators.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Python Style Guide</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="power-features.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="decorators.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default panel-hide">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">--HIDE--</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Introduction
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Python Language Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="lint.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lint
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="imports.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Imports
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="packages.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Packages
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="exceptions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Exceptions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="global-variables.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Global Variables
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="classes-and-functions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Nested/Local/Inner Classes and Functions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="list-comprehensions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            List Comprehensions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="iterators-and-operators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Default Iterators and Operators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="generators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Generators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="lambda-functions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lambda Functions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="conditional-expressions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Conditional Expressions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="argument-values.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Default Argument Values
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="properties.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Properties
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="evaluations.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            True/False Evaluations
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="deprecated-language-features.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Deprecated Language Features
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="lexical-scoping.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lexical Scoping
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="decorators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Function and Method Decorators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="threading.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Threading
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="power-features.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Power Features
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Python Style Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../python-style-rules/semicolons.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Semicolons
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/line-length.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Line Length
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/parentheses.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Parentheses
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/indentation.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Indentation
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/blank-lines.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Blank Lines
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/whitespace.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Whitespace
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/shebang-line.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Shebang Line
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/comments.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Comments
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/classes.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Classes
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/strings.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Strings
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/files-and-sockets.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Files and Sockets
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/todo-comments.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            TODO Comments
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/imports-formatting.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Imports Formatting
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/statements.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Statements
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/access-control.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Access Control
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/naming.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Naming
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-style-rules/main.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Main
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Django Style Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../django-style-rules/models.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Models
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/views.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Views
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/forms.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Forms
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/urls.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Urls
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="threading">Threading</h1>
+<p>Do not rely on the atomicity of built-in types.</p>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Threading","level":"2.18","depth":1,"next":{"title":"Power Features","level":"2.19","depth":1,"path":"python-language-rules/power-features.md","ref":"python-language-rules/power-features.md","articles":[]},"previous":{"title":"Function and Method Decorators","level":"2.17","depth":1,"path":"python-language-rules/decorators.md","ref":"python-language-rules/decorators.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/python-style-guide"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Style Guide","gitbook":">=3.0.0","description":""},"file":{"path":"python-language-rules/threading.md","mtime":"2018-06-21T09:33:30.194Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T09:35:39.003Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

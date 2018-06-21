@@ -1,0 +1,959 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Whitespace · Python Style Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="shebang-line.html" />
+    
+    
+    <link rel="prev" href="blank-lines.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Python Style Guide</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="shebang-line.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="blank-lines.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default panel-hide">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">--HIDE--</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Introduction
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Python Language Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../python-language-rules/lint.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lint
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/imports.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Imports
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/packages.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Packages
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/exceptions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Exceptions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/global-variables.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Global Variables
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/classes-and-functions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Nested/Local/Inner Classes and Functions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/list-comprehensions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            List Comprehensions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/iterators-and-operators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Default Iterators and Operators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/generators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Generators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/lambda-functions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lambda Functions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/conditional-expressions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Conditional Expressions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/argument-values.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Default Argument Values
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/properties.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Properties
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/evaluations.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            True/False Evaluations
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/deprecated-language-features.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Deprecated Language Features
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/lexical-scoping.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lexical Scoping
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/decorators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Function and Method Decorators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/threading.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Threading
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/power-features.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Power Features
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Python Style Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="semicolons.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Semicolons
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="line-length.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Line Length
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="parentheses.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Parentheses
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="indentation.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Indentation
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="blank-lines.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Blank Lines
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="whitespace.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Whitespace
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="shebang-line.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Shebang Line
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="comments.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Comments
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="classes.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Classes
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="strings.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Strings
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="files-and-sockets.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Files and Sockets
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="todo-comments.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            TODO Comments
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="imports-formatting.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Imports Formatting
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="statements.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Statements
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="access-control.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Access Control
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="naming.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Naming
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="main.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Main
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Django Style Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../django-style-rules/models.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Models
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/views.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Views
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/forms.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Forms
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/urls.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Urls
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="whitespace">Whitespace</h1>
+<p>&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x89C4;&#x8303;&#x4F7F;&#x7528;&#x7A7A;&#x683C;&#x3002;</p>
+<p><img align="absmiddle" alt=":point_right:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/point_right.png" title=":point_right:"> <strong>&#x62EC;&#x53F7;&#x5185;&#x4E0D;&#x8981;&#x6709;&#x7A7A;&#x683C;</strong></p>
+<pre class="language-"><code class="lang-python">spam<span class="token punctuation">(</span>ham<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>eggs<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img align="absmiddle" alt=":point_right:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/point_right.png" title=":point_right:"> <strong>&#x9017;&#x53F7;&#x3001;&#x5206;&#x53F7;&#x3001;&#x5192;&#x53F7;&#x524D;&#x4E0D;&#x8981;&#x52A0;&#x7A7A;&#x683C;&#xFF0C;&#x9017;&#x53F7;&#x3001;&#x5206;&#x53F7;&#x3001;&#x5192;&#x53F7;&#x540E;&#x9762;&#x52A0;&#x7A7A;&#x683C;&#xFF0C;&#x9664;&#x4E86;&#x884C;&#x5C3E;</strong></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> x<span class="token punctuation">,</span> y
+x<span class="token punctuation">,</span> y <span class="token operator">=</span> y<span class="token punctuation">,</span> x
+</code></pre>
+<p><img align="absmiddle" alt=":point_right:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/point_right.png" title=":point_right:"> <strong>&#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x3001;&#x7D22;&#x5F15;&#x3001;&#x5207;&#x7247;&#x7684;&#x5F00;&#x59CB;&#x62EC;&#x53F7;/&#x65B9;&#x62EC;&#x53F7;&#x4E4B;&#x524D;&#x4E0D;&#x8981;&#x6709;&#x7A7A;&#x683C;</strong></p>
+<pre class="language-"><code class="lang-python">spam<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+dict<span class="token punctuation">[</span><span class="token string">&apos;key&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> list<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+</code></pre>
+<p><img align="absmiddle" alt=":point_right:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/point_right.png" title=":point_right:"> <strong>&#x5728;&#x8FD0;&#x7B97;&#x7B26;&#x524D;&#x540E;&#x6DFB;&#x52A0;&#x7A7A;&#x683C;</strong></p>
+<p>&#x8FD9;&#x4E9B;&#x8FD0;&#x7B97;&#x7B26;&#x5305;&#x62EC;&#xFF1A;<code>==</code>&#x3001;<code>&lt;</code>&#x3001;<code>&gt;</code>&#x3001;<code>!=</code>&#x3001;<code>&lt;&gt;</code>&#x3001;<code>&lt;=</code>&#x3001;<code>&gt;=</code>&#x3001;<code>in</code>&#x3001;<code>not in</code>&#x3001;<code>is</code>&#x3001;<code>is not</code>&#x3001;<code>and</code>&#x3001;<code>or</code>&#x3001;<code>not</code>&#x3002;
+&#x4F46;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x9700;&#x8981;&#x4F60;&#x81EA;&#x884C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x7A7A;&#x683C;&#x3002;</p>
+<p><img align="absmiddle" alt=":point_right:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/point_right.png" title=":point_right:"> <strong>&#x5728;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;<code>=</code>&#x524D;&#x540E;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x7A7A;&#x683C;&#xFF0C;&#x4F46;<code>=</code>&#x7528;&#x4E8E;&#x6307;&#x793A;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x6216;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x6DFB;&#x52A0;&#x7A7A;&#x683C;</strong></p>
+<pre class="language-"><code class="lang-python">x <span class="token operator">==</span> <span class="token number">1</span>
+
+<span class="token keyword">def</span> <span class="token function">complex</span><span class="token punctuation">(</span>real<span class="token punctuation">,</span> imag<span class="token operator">=</span><span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">return</span> magic<span class="token punctuation">(</span>r<span class="token operator">=</span>real<span class="token punctuation">,</span> i<span class="token operator">=</span>imag<span class="token punctuation">)</span>
+</code></pre>
+<p><img align="absmiddle" alt=":point_right:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/point_right.png" title=":point_right:"> <strong>&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x7A7A;&#x683C;&#x5BF9;&#x9F50;&#x8FDE;&#x7EED;&#x884C;&#x7684;&#x6807;&#x8BB0;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x4F1A;&#x6210;&#x4E3A;&#x7EF4;&#x62A4;&#x7684;&#x8D1F;&#x62C5;&#xFF08;&#x5982;<code>:</code>&#x3001;<code>,</code>&#x3001;<code>#</code>&#x3001;<code>=</code>&#x7B49;&#xFF09;</strong></p>
+<pre class="language-"><code class="lang-python">foo <span class="token operator">=</span> <span class="token number">1000</span>  <span class="token comment" spellcheck="true"># comment</span>
+long_name <span class="token operator">=</span> <span class="token number">2</span>  <span class="token comment" spellcheck="true"># comment that should not be aligned</span>
+
+dictionary <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;foo&apos;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;long_name&apos;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0D;&#x8981;&#x8FD9;&#x6837;&#x505A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">foo       <span class="token operator">=</span> <span class="token number">1000</span>  <span class="token comment" spellcheck="true"># comment</span>
+long_name <span class="token operator">=</span> <span class="token number">2</span>     <span class="token comment" spellcheck="true"># comment that should not be aligned</span>
+
+dictionary <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;foo&apos;</span>      <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;long_name&apos;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Whitespace","level":"3.6","depth":1,"next":{"title":"Shebang Line","level":"3.7","depth":1,"path":"python-style-rules/shebang-line.md","ref":"python-style-rules/shebang-line.md","articles":[]},"previous":{"title":"Blank Lines","level":"3.5","depth":1,"path":"python-style-rules/blank-lines.md","ref":"python-style-rules/blank-lines.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/python-style-guide"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Style Guide","gitbook":">=3.0.0","description":""},"file":{"path":"python-style-rules/whitespace.md","mtime":"2018-06-21T09:33:30.198Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T09:35:39.003Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

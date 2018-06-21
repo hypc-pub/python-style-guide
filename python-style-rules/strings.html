@@ -1,0 +1,959 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Strings · Python Style Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="files-and-sockets.html" />
+    
+    
+    <link rel="prev" href="classes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Python Style Guide</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="files-and-sockets.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="classes.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default panel-hide">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">--HIDE--</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Introduction
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Python Language Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../python-language-rules/lint.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lint
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/imports.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Imports
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/packages.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Packages
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/exceptions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Exceptions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/global-variables.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Global Variables
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/classes-and-functions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Nested/Local/Inner Classes and Functions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/list-comprehensions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            List Comprehensions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/iterators-and-operators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Default Iterators and Operators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/generators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Generators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/lambda-functions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lambda Functions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/conditional-expressions.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Conditional Expressions
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/argument-values.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Default Argument Values
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/properties.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Properties
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/evaluations.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            True/False Evaluations
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/deprecated-language-features.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Deprecated Language Features
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/lexical-scoping.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Lexical Scoping
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/decorators.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Function and Method Decorators
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/threading.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Threading
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../python-language-rules/power-features.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Power Features
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Python Style Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="semicolons.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Semicolons
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="line-length.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Line Length
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="parentheses.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Parentheses
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="indentation.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Indentation
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="blank-lines.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Blank Lines
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="whitespace.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Whitespace
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="shebang-line.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Shebang Line
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="comments.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Comments
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="classes.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Classes
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="strings.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Strings
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="files-and-sockets.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Files and Sockets
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="todo-comments.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            TODO Comments
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="imports-formatting.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Imports Formatting
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="statements.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Statements
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="access-control.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Access Control
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="naming.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Naming
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="main.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Main
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Django Style Rules</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../django-style-rules/models.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Models
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/views.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Views
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/forms.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Forms
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../django-style-rules/urls.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Urls
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="strings">Strings</h1>
+<p>&#x4F7F;&#x7528;<code>format</code>&#x51FD;&#x6570;&#x6216;<code>%</code>&#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x5316;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x53EA;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;<code>+</code>&#x53F7;&#x64CD;&#x4F5C;&#x7B26;&#x5373;&#x53EF;&#x3002;</p>
+<p><strong>&#x4F8B;&#x5982;</strong></p>
+<pre class="language-"><code class="lang-python">x <span class="token operator">=</span> a <span class="token operator">+</span> b
+x <span class="token operator">=</span> <span class="token string">&apos;%s, %s!&apos;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>imperative<span class="token punctuation">,</span> expletive<span class="token punctuation">)</span>
+x <span class="token operator">=</span> <span class="token string">&apos;{}, {}!&apos;</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>imperative<span class="token punctuation">,</span> expletive<span class="token punctuation">)</span>
+x <span class="token operator">=</span> <span class="token string">&apos;name: %s; score: %d&apos;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>name<span class="token punctuation">,</span> n<span class="token punctuation">)</span>
+x <span class="token operator">=</span> <span class="token string">&apos;name: {}; score: {}&apos;</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>name<span class="token punctuation">,</span> n<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x9519;&#x8BEF;&#x7684;&#x5199;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-python">x <span class="token operator">=</span> <span class="token string">&apos;%s%s&apos;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># use + in this case</span>
+x <span class="token operator">=</span> <span class="token string">&apos;{}{}&apos;</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># use + in this case</span>
+x <span class="token operator">=</span> imperative <span class="token operator">+</span> <span class="token string">&apos;, &apos;</span> <span class="token operator">+</span> expletive <span class="token operator">+</span> <span class="token string">&apos;!&apos;</span>
+x <span class="token operator">=</span> <span class="token string">&apos;name: &apos;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">&apos;; score: &apos;</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x907F;&#x514D;&#x5728;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x4E2D;&#x4F7F;&#x7528;<code>+</code>&#x6216;<code>+=</code>&#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x7531;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x90A3;&#x6837;&#x64CD;&#x4F5C;&#x7684;&#x8BDD;&#x5C06;&#x4F1A;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x7684;&#x4E34;&#x65F6;&#x5BF9;&#x8C61;&#x3002;
+&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>&apos;&apos;.join</code>&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x62FC;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
+<pre class="language-"><code class="lang-python">items <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;&lt;table&gt;&apos;</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> last_name<span class="token punctuation">,</span> first_name <span class="token keyword">in</span> employee_list<span class="token punctuation">:</span>
+    items<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&apos;&lt;tr&gt;&lt;td&gt;%s, %s&lt;/td&gt;&lt;/tr&gt;&apos;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>last_name<span class="token punctuation">,</span> first_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+items<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&apos;&lt;/table&gt;&apos;</span><span class="token punctuation">)</span>
+employee_table <span class="token operator">=</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>items<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x9519;&#x8BEF;&#x7684;&#x5199;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-python">employee_table <span class="token operator">=</span> <span class="token string">&apos;&lt;table&gt;&apos;</span>
+<span class="token keyword">for</span> last_name<span class="token punctuation">,</span> first_name <span class="token keyword">in</span> employee_list<span class="token punctuation">:</span>
+    employee_table <span class="token operator">+=</span> <span class="token string">&apos;&lt;tr&gt;&lt;td&gt;%s, %s&lt;/td&gt;&lt;/tr&gt;&apos;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>last_name<span class="token punctuation">,</span> first_name<span class="token punctuation">)</span>
+employee_table <span class="token operator">+=</span> <span class="token string">&apos;&lt;/table&gt;&apos;</span>
+</code></pre>
+<p>&#x5728;&#x5199;&#x591A;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;<code>&quot;&quot;&quot;</code>&#x800C;&#x4E0D;&#x662F;<code>&apos;&apos;&apos;</code>&#x3002;
+&#x800C;&#x4E0D;&#x7BA1;&#x5728;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#xFF0C;&#x6587;&#x6863;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x5FC5;&#x987B;&#x4F7F;&#x7528;<code>&quot;&quot;&quot;</code>&#x3002;
+&#x53E6;&#x5916;&#x4E5F;&#x4E0D;&#x8981;&#x76F2;&#x76EE;&#x7684;&#x4F7F;&#x7528;&#x591A;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x968F;&#x7740;&#x4EE3;&#x7801;&#x7684;&#x7F29;&#x8FDB;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x4E0D;&#x53EF;&#x9884;&#x6599;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&quot;This is much nicer.\n&quot;</span>
+       <span class="token string">&quot;Do it this way.\n&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x9519;&#x8BEF;&#x7684;&#x5199;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">print</span> <span class="token triple-quoted-string string">&quot;&quot;&quot;This is pretty ugly.
+Don&apos;t do this.
+&quot;&quot;&quot;</span>
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Strings","level":"3.10","depth":1,"next":{"title":"Files and Sockets","level":"3.11","depth":1,"path":"python-style-rules/files-and-sockets.md","ref":"python-style-rules/files-and-sockets.md","articles":[]},"previous":{"title":"Classes","level":"3.9","depth":1,"path":"python-style-rules/classes.md","ref":"python-style-rules/classes.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/python-style-guide"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Style Guide","gitbook":">=3.0.0","description":""},"file":{"path":"python-style-rules/strings.md","mtime":"2018-06-21T09:33:30.198Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T09:35:39.003Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+
