@@ -4,6 +4,7 @@
 * 字段名全部使用小写字母加下划线格式
 * 必须添加主键，且主键必须是`UUIDField`字段
 * 值为多选一的字段，必须添加`choices`参数，且必须使用大写
+* 有需要作为搜索条件的字段都需要加上索引
 * `class Meta`必须位于字段定义完成之后，其他函数之前
 * 必须添加这些字段`created_time`、`updated_time`、`deleted`、`deleted_time`、`description`
 * model类中的各成员的顺序应遵循以下顺序（不是所有项都是必须的）
@@ -20,19 +21,19 @@
 
 ```python
 class Person(models.Model):
-    person_id = models.UUIDField(primary_key=True, default=uuid.uuid1)
-    first_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=40)
+    person_id = models.UUIDField(primary_key=True, default=uuid.uuid1, db_index=True)
+    first_name = models.CharField(max_length=20, db_index=True)
+    last_name = models.CharField(max_length=40, db_index=True)
     GENDERS = (
         ('MALE', 'MALE'),
         ('FEMALE', 'FEMALE'),
     )
-    gender = models.CharField(max_length=10, choices=GENDERS)
-    birthday = models.DateTimeField(null=True)
-    job = models.CharField(max_length=200, blank=True)
-    created_time = models.DateTimeField(auto_now_add=True)
-    updated_time = models.DateTimeField(auto_now=True)
-    deleted = models.BooleanField(default=False)
+    gender = models.CharField(max_length=10, choices=GENDERS, db_index=True)
+    birthday = models.DateTimeField(null=True, db_index=True)
+    job = models.CharField(max_length=200, blank=True, db_index=True)
+    created_time = models.DateTimeField(auto_now_add=True, db_index=True)
+    updated_time = models.DateTimeField(auto_now=True, db_index=True)
+    deleted = models.BooleanField(default=False, db_index=True)
     deleted_time = models.DateTimeField(null=True)
     description = models.TextField(blank=True)
 
