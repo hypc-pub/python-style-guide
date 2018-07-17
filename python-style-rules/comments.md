@@ -39,7 +39,7 @@ def function_with_types_in_docstring(param1, param2):
     ...
 ```
 
-关于Type Hints的用法可以参考：[Type Hinting in PyCharm][hints]、[PEP 484][pep484]。
+关于Type Hints的用法可以参考：[typing — Support for type hints][hints]、[PEP 484][pep484]。
 
 ## Classes
 
