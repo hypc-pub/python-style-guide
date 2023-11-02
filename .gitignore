@@ -31,4 +31,5 @@ Session.vim
 tags
 
 # 自定义
-.nvmrc
+package.json
+package-lock.json

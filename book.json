@@ -8,7 +8,7 @@
     },
     "plugins": [
         "theme-opendocs", "advanced-emoji",
-        "ace", "codeblock-label",
+        "codeblock-label",
         "simpletabs",
         "include",
         "katex",
